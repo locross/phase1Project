@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <link href="styles.css" rel="stylesheet">
+   <script src="index.js"></script>
+   <title>Resume Builder</title>
+</head>
+
+  <body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- Navbar Code -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/1175px-Test-Logo.svg.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Form Layout-->
+    <div>
+<!-- Form Layout first half -->
+    <form class="row g-4 needs-validation" novalidate>
+        <div class="col-md-2 gx-5">
+          <label for="validationCustom01" class="form-label">First name</label>
+          <input type="text" class="form-control" id="fNameIn" value="" placeholder="Alfred" required>
+          <div class="valid-feedback">
+            Please enter First Name
+          </div>
+        </div>
+
+        <div class="col-md-2 gx-5">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="lNameIn" value="" placeholder="Pennyworth" required>
+          <div class="valid-feedback">
+            Please enter Last Name
+          </div>
+        </div>
+
+        <div class="col-md-4 gx-5">
+          <label for="validationCustomUsername" class="form-label">Email</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="eMailIn" aria-describedby="inputGroupPrepend" placeholder="blahblah@gmail.com" required>
+            <div class="invalid-feedback">
+              Please enter Email
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 gx-5">
+            <label for="validationCustomUsername" class="form-label">Phone Number</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">+61</span>
+              <input type="text" class="form-control" id="phoneIn" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please enter Phone Number
+              </div>
+            </div>
+          </div>
+
+        <div class="col-md-4 gx-5">
+          <label for="validationCustom03" class="form-label">City of Occupancy</label>
+          <input type="text" class="form-control" id="CoOIn" placeholder="Eg: Victoria"required>
+          <div class="invalid-feedback">
+            Please enter City of Occupancy
+          </div>
+        </div>
+        </form>
+        <br>
+<!-- Form Layout second half -->        
+        <form class="row g-4 needs-validation" novalidate>
+        <div class="col-md-4 gx-5">
+            <label for="validationCustom03" class="form-label">Experience 1</label>
+            <input type="text" class="form-control" id="experience1In" placeholder="Eg: Banana picker" required>
+            <div class="invalid-feedback gx-5">
+              Please enter Job Experience 
+            </div>
+          </div>
+          <div class="input-group gx-5">
+            <span class="input-group-text">With textarea</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div>
+
+          <div class="col-md-4 gx-5">
+            <label for="validationCustom03" class="form-label">Experience 2</label>
+            <input type="text" class="form-control" id="experience2In" placeholder="Eg: Car salesman" required>
+            <div class="invalid-feedback">
+                Please enter Job Experience 
+            </div>
+          </div>
+          <div class="input-group gx-5">
+            <span class="input-group-text">With textarea</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div>
+
+          <div class="col-md-4 gx-5">
+            <label for="validationCustom03" class="form-label">Experience 3</label>
+            <input type="text" class="form-control" id="experience3In" placeholder="Eg: Store cleaner">
+          </div>
+          <div class="input-group gx-5">
+          <span class="input-group-text">With textarea</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        
+        <div class="col-12 gx-5">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>       
+    </form>
+    </div>
+
+  </body>
+</html>
