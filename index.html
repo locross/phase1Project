@@ -5,12 +5,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <link href="styles.css" rel="stylesheet">
-   <script src="index.js"></script>
+  
    <title>Resume Builder</title>
 </head>
 
   <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <!-- Navbar Code -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -26,16 +27,17 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#" onclick="about()">About</a>
                 </li>
                 </ul>
             </div>
         </div>
     </nav>
+
 <!-- Form Layout-->
-    <div>
+    <div class="formContainerFH">
 <!-- Form Layout first half -->
-    <form class="row g-4 needs-validation" novalidate>
+    <form class="row g-4 needs-validation" id="formFH" novalidate>
         <div class="col-md-2 gx-5">
           <label for="validationCustom01" class="form-label">First name</label>
           <input type="text" class="form-control" id="fNameIn" value="" placeholder="Alfred" required>
@@ -76,25 +78,28 @@
 
         <div class="col-md-4 gx-5">
           <label for="validationCustom03" class="form-label">City of Occupancy</label>
-          <input type="text" class="form-control" id="CoOIn" placeholder="Eg: Victoria"required>
+          <input type="text" class="form-control" id="cityIn" placeholder="Eg: Victoria"required>
           <div class="invalid-feedback">
             Please enter City of Occupancy
           </div>
         </div>
         </form>
-        <br>
-<!-- Form Layout second half -->        
-        <form class="row g-4 needs-validation" novalidate>
+      </div>
+      <br>
+
+<!-- Form Layout second half -->     
+    <div class="formContainerSH">
+    <form class="row g-4 needs-validation" id="formSH" novalidate>
         <div class="col-md-4 gx-5">
             <label for="validationCustom03" class="form-label">Experience 1</label>
-            <input type="text" class="form-control" id="experience1In" placeholder="Eg: Banana picker" required>
+            <input type="text" class="form-control" id="experience1In" placeholder="Eg: Banana picker" value="" required>
             <div class="invalid-feedback gx-5">
               Please enter Job Experience 
             </div>
           </div>
           <div class="input-group gx-5">
-            <span class="input-group-text">With textarea</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
+            <span class="input-group-text">Experience Information</span>
+            <textarea class="form-control" aria-label="With textarea" id="experience1Info"></textarea>
           </div>
 
           <div class="col-md-4 gx-5">
@@ -105,8 +110,8 @@
             </div>
           </div>
           <div class="input-group gx-5">
-            <span class="input-group-text">With textarea</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
+            <span class="input-group-text">Experience Information</span>
+            <textarea class="form-control" aria-label="With textarea" id="experience2Info"></textarea>
           </div>
 
           <div class="col-md-4 gx-5">
@@ -114,15 +119,36 @@
             <input type="text" class="form-control" id="experience3In" placeholder="Eg: Store cleaner">
           </div>
           <div class="input-group gx-5">
-          <span class="input-group-text">With textarea</span>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
+          <span class="input-group-text">Experience Information</span>
+          <textarea class="form-control" aria-label="With textarea" id="experience3Info" value="asda"></textarea>
         </div>
         
         <div class="col-12 gx-5">
-          <button class="btn btn-primary" type="submit">Submit form</button>
+          <button class="btn btn-primary" onclick="output()">Submit</button>
+          <input type="button" class="btn btn-primary" onclick="saveValues()" value="Save">
+          <button class="btn btn-primary" onclick="reset()">Reset</button>
         </div>       
     </form>
     </div>
 
-  </body>
+<!-- Resume output -->
+    <div class="pageContainer">
+      <div class="page shadow-lg" id="page">
+          <h1 id="heading" class="heading" id="heading">Alfred Pennyworth</h1>
+          <p class="information" id="emailOut">blahblah@gmail.com</p><br>
+          <p class="information" id="phoneOut">0452125635</p><br>
+          <p class="information" id="cityOut">Melbourne Park</p><br>
+          <h2 class="subHeader" >Experience</h2><br>
+          <h3 class="expHeader" id="experience1Out">Experience 1</h2><br>
+          <p id="experience1InfoOut">1</p><br>
+          <h3 class="expHeader" id="experience2Out">experience2In</h2><br>
+          <p id="experience2InfoOut">2</p><br>
+          <h3 class="expHeader" id="experience3Out">Disher Washer</h2><br>
+          <p id="experience3InfoOut">3</p>
+      </div>
+    </div>
+
+<script src="index.js"></script>
+</body>
+  
 </html>

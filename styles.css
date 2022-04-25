@@ -1,0 +1,47 @@
+/* Form container First half and Second half*/
+.formContainerFH{
+    margin-top: 30px;
+}
+.formContainerSH{
+    margin: 20px 0;
+}
+
+/* Style for output */
+.pageContainer{
+    text-align: center;
+}
+
+div.page{
+    margin: 40px auto;
+    width: 602px;
+    height: 876px;
+    background-color:burlywood;
+    
+}
+
+.heading{
+    padding: 30px 40px 0 20px;
+    margin: 0 auto 40px 0;
+    float: left;
+    padding-bottom: 30px;
+    text-decoration: underline;
+    display: block
+}
+
+.information{
+    float: right;
+    margin: 10px 20px 0 0;
+}
+
+
+.subHeader{
+    padding: 30px 40px 0 20px;
+    margin: 10px auto 0 auto;
+    float: left;
+    
+}
+
+.expHeader{
+    float: left;
+    
+}
