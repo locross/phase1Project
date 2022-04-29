@@ -5,8 +5,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <link href="styles.css" rel="stylesheet">
-  
-   <title>Resume Builder</title>
+  <title>Resume Builder</title>
+<!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Montserrat:ital,wght@1,300&family=Roboto+Condensed:ital,wght@1,300&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
 </head>
 
   <body>
@@ -124,30 +127,62 @@
         </div>
         
         <div class="col-12 gx-5">
-          <button class="btn btn-primary" onclick="output()">Submit</button>
+          <button type="button" class="btn btn-primary" onclick="output()">Submit</button>
           <input type="button" class="btn btn-primary" onclick="saveValues()" value="Save">
-          <button class="btn btn-primary" onclick="reset()">Reset</button>
+          <button type="button" class="btn btn-primary" onclick="reset()">Reset</button>
         </div>       
     </form>
     </div>
 
 <!-- Resume output -->
     <div class="pageContainer">
-      <div class="page shadow-lg" id="page">
+      <div class="page shadow-lg" id="page" style="background-image: url('https://i.pinimg.com/736x/59/6b/8f/596b8fed52b2cedb3addf527c150534c.jpg')">
           <h1 id="heading" class="heading" id="heading">Alfred Pennyworth</h1>
-          <p class="information" id="emailOut">blahblah@gmail.com</p><br>
-          <p class="information" id="phoneOut">0452125635</p><br>
-          <p class="information" id="cityOut">Melbourne Park</p><br>
+          <div class="logo" style="background-image: url('https://cdn-icons.flaticon.com/png/512/542/premium/542689.png?token=exp=1651135552~hmac=04b0840e3ea7dde637ab4fa6f104ad13');"></div>
+          <p class="information " id="emailOut">blahblah@gmail.com</p>
+          <div class="logo" style="background-image: url('https://cdn-icons-png.flaticon.com/512/597/597177.png');"></div>
+          <p class="information"  id="phoneOut">0452125635</p>
+          <div class="logo" style="background-image: url('https://cdn-icons-png.flaticon.com/512/25/25694.png');"></div>
+          <p class="information" id="cityOut">Melbourne Park</p>
           <h2 class="subHeader" >Experience</h2><br>
-          <h3 class="expHeader" id="experience1Out">Experience 1</h2><br>
-          <p id="experience1InfoOut">1</p><br>
-          <h3 class="expHeader" id="experience2Out">experience2In</h2><br>
-          <p id="experience2InfoOut">2</p><br>
-          <h3 class="expHeader" id="experience3Out">Disher Washer</h2><br>
+          <h3 class="expHeader" id="experience1Out">Experience 1</h2>
+          <p id="experience1InfoOut">1</p>
+          <h3 class="expHeader" id="experience2Out">experience2In</h2>
+          <p id="experience2InfoOut">2</p>
+          <h3 class="expHeader" id="experience3Out">Disher Washer</h2>
           <p id="experience3InfoOut">3</p>
       </div>
     </div>
 
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Font Style
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><button class="dropdown-item" onclick="fontChanger(fontSelections[1])">Hind Madurai</button></li>
+        <li><button class="dropdown-item" onclick="fontChanger(fontSelections[2])">Montserrat</button></li>
+        <li><button class="dropdown-item" onclick="fontChanger(fontSelections[3])">Roboto Condensed</button></li>
+        <li><button class="dropdown-item" onclick="fontChanger(fontSelections[4])">Titillium Web</button></li>
+      </ul>
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+        Background style
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+        <li><button class="dropdown-item" onclick="backgroundChanger(backgroundSelections[1])">Blue Abstract</button></li>
+        <li><button class="dropdown-item" onclick="backgroundChanger(backgroundSelections[2])" >Blue Waves</button></li>
+        <li><button class="dropdown-item" onclick="backgroundChanger(backgroundSelections[3])" >Textured White</button></li>
+        <li><button class="dropdown-item" onclick="backgroundChanger(backgroundSelections[4])" >Textured Black</button></li>
+      </ul>
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+        Font colour
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+        <li><button class="dropdown-item" onclick="colorChanger('black')">Black</button></li>
+        <li><button class="dropdown-item" onclick="colorChanger('white')">White</button></li>
+        <li><button class="dropdown-item" onclick="colorChanger('lightslategray')">Light grey</button></li>
+        <li><button class="dropdown-item" onclick="colorChanger('darkgray')">Dark Grey</button></li>
+      </ul>
+    </div>
 <script src="index.js"></script>
 </body>
   

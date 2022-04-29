@@ -20,28 +20,39 @@ div.page{
 }
 
 .heading{
-    padding: 30px 40px 0 20px;
-    margin: 0 auto 40px 0;
-    float: left;
-    padding-bottom: 30px;
+    padding: 30px 0 10px 0;
     text-decoration: underline;
     display: block
 }
 
 .information{
-    float: right;
-    margin: 10px 20px 0 0;
+    display: inline-block;
+    margin-right: 20px;
+   
 }
 
-
 .subHeader{
-    padding: 30px 40px 0 20px;
-    margin: 10px auto 0 auto;
-    float: left;
+    margin: 10px 0 0 30px;
+    text-align: start;
+    text-decoration: underline;
     
 }
 
 .expHeader{
-    float: left;
-    
+    text-align: start;
+    font-size: large;
+    margin-left: 20px;
+}
+
+.logo{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    margin-top: 5px;
+}
+
+.dropdown{
+    padding-left: 10px;
+
 }
