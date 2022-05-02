@@ -1,3 +1,10 @@
+fetch("http://localhost:3000/Saves")
+  .then(response => response.json()) 
+  .then(data => {
+    console.log(data)
+  })
+var data = [];
+
 function about(){
     alert('Link to about page')
 
@@ -8,7 +15,7 @@ function reset(){
     formFH.lNameIn.value = '';
     formFH.eMailIn.value = '';
     formFH.phoneIn.value = '';
-    document.getElementById('cityIn').value = '';
+    formFH.cityIn.value = '';
     formSH.experience1In.value = '';
     formSH.experience1Info.value = '';
     formSH.experience2In.value = '';
@@ -19,36 +26,28 @@ function reset(){
 };
 
 function saveValues(){
-    const fname = formFH.fNameIn.value;
-    const lname = formFH.lNameIn.value;
-    const email = formFH.eMailIn.value;
-    const phNumber = formFH.phoneIn.value;
-    const city = formFH.cityIn.value;
-    const experience1 = formSH.experience1In.value;
-    const experience1Info = formSH.experience1Info.value;
-    const experience2 = formSH.experience2In.value;
-    const experience2Info = formSH.experience2Info.value;
-    const experience3 = formSH.experience3In.value;
-    const experience3Info = formSH.experience3Info.value;
-    console.log(fname);
-    console.log(lname);
-    console.log(email);
-    console.log(phNumber);
-    console.log(city);
-    console.log(experience1);
-    console.log(experience1Info);
-    console.log(experience2);
-    console.log(experience2Info);
-    console.log(experience3);
-    console.log(experience3Info);
 
+configurationObject = {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    body: JSON.stringify({
+        "fname": formFH.fNameIn.value,
+        "lname": formFH.lNameIn.value,
+        "email": formFH.eMailIn.value,
+        "phNumber": formFH.phoneIn.value,
+        "city": formFH.cityIn.value,
+        "experience1": formSH.experience1In.value,
+        "experience2":  formSH.experience2In.value,
+        "experience3": formSH.experience3In.value
+    })
+}
+fetch("http://localhost:3000/Saves", configurationObject);
 };
 
 function output(){
-    document.getElementById('heading').innerText = formFH.fNameIn.value + ' ' + formFH.lNameIn.value;
-    document.getElementById('emailOut').innerHTML = formFH.eMailIn.value;
-    document.getElementById('phoneOut').innerText = formFH.phoneIn.value;
-    document.getElementById('cityOut').innerText = formFH.cityIn.value;
     document.getElementById('experience1Out').innerText = formSH.experience1In.value;
     document.getElementById('experience1InfoOut').innerHTML = formSH.experience1Info.value;
     document.getElementById('experience2Out').innerText = formSH.experience2In.value;
