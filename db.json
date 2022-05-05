@@ -1,59 +1,15 @@
 {
   "Saves": [
     {
-      "id": 0,
-      "fName": "Alfred",
-      "lName": "Pennyworth",
+      "fname": "Alfred",
+      "lname": "Pennyworth",
       "email": "a.pworth@gmail.com",
       "phNumber": "0499855662",
       "city": "Melbourne",
       "experience1": "Banana Picker",
       "experience2": "Potato Picker",
-      "experience3": "Lollipop Man"
-    },
-    {
-      "fname": "1",
-      "lname": "2",
-      "email": "3",
-      "phNumber": "5",
-      "city": "",
-      "experience1": "",
-      "experience2": "",
-      "experience3": "",
-      "id": 1
-    },
-    {
-      "fname": "Hubert",
-      "lname": "abababa",
-      "email": "123@gmail.com",
-      "phNumber": "`132342452",
-      "city": "Sydney",
-      "experience1": "123",
-      "experience2": "321",
-      "experience3": "456",
-      "id": 2
-    },
-    {
-      "fname": "Hubert",
-      "lname": "abababa",
-      "email": "123@gmail.com",
-      "phNumber": "`132342452",
-      "city": "Sydney",
-      "experience1": "123",
-      "experience2": "321",
-      "experience3": "456",
-      "id": 3
-    },
-    {
-      "fname": "1",
-      "lname": "2",
-      "email": "3",
-      "phNumber": "4",
-      "city": "5",
-      "experience1": "6",
-      "experience2": "8",
-      "experience3": "10",
-      "id": 4
+      "experience3": "Lollipop Man",
+      "id": 0
     }
   ]
 }

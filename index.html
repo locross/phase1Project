@@ -29,8 +29,13 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="about()">About</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Saves
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdownUL">
+                    
+                  </ul>
                 </li>
                 </ul>
             </div>
@@ -38,9 +43,8 @@
     </nav>
 
 <!-- Form Layout-->
-    <div class="formContainerFH">
-<!-- Form Layout first half -->
-    <form class="row g-4 needs-validation" id="formFH" novalidate>
+    <div class="formContainer">
+    <form class="row g-4 needs-validation" id="form" novalidate>
         <div class="col-md-2 gx-5">
           <label for="validationCustom01" class="form-label">First name</label>
           <input type="text" class="form-control" id="fNameIn" value="" placeholder="Alfred" required>
@@ -86,13 +90,7 @@
             Please enter City of Occupancy
           </div>
         </div>
-        </form>
-      </div>
-      <br>
-
-<!-- Form Layout second half -->     
-    <div class="formContainerSH">
-    <form class="row g-4 needs-validation" id="formSH" novalidate>
+        <div></div>
         <div class="col-md-4 gx-5">
             <label for="validationCustom03" class="form-label">Experience 1</label>
             <input type="text" class="form-control" id="experience1In" placeholder="Eg: Banana picker" value="" required>
@@ -135,22 +133,22 @@
     </div>
 
 <!-- Resume output -->
-    <div class="pageContainer">
+    <div class="pageContainer" id="formOutput">
       <div class="page shadow-lg" id="page" style="background-image: url('https://i.pinimg.com/736x/59/6b/8f/596b8fed52b2cedb3addf527c150534c.jpg')">
-          <h1 id="heading" class="heading" id="heading">Alfred Pennyworth</h1>
-          <div class="logo" style="background-image: url('https://cdn-icons.flaticon.com/png/512/542/premium/542689.png?token=exp=1651135552~hmac=04b0840e3ea7dde637ab4fa6f104ad13');"></div>
-          <p class="information " id="emailOut">blahblah@gmail.com</p>
-          <div class="logo" style="background-image: url('https://cdn-icons-png.flaticon.com/512/597/597177.png');"></div>
-          <p class="information"  id="phoneOut">0452125635</p>
-          <div class="logo" style="background-image: url('https://cdn-icons-png.flaticon.com/512/25/25694.png');"></div>
-          <p class="information" id="cityOut">Melbourne Park</p>
-          <h2 class="subHeader" >Experience</h2><br>
-          <h3 class="expHeader" id="experience1Out">Experience 1</h2>
-          <p id="experience1InfoOut">1</p>
-          <h3 class="expHeader" id="experience2Out">experience2In</h2>
-          <p id="experience2InfoOut">2</p>
-          <h3 class="expHeader" id="experience3Out">Disher Washer</h2>
-          <p id="experience3InfoOut">3</p>
+          <h1 id="heading" class="heading" id="heading"></h1>
+          <div class="logo" id="emailLogo"></div>
+          <p class="information " id="emailOut"></p>
+          <div class="logo" id="phoneLogo"></div>
+          <p class="information"  id="phoneOut"></p>
+          <div class="logo" id="cityLogo"></div>
+          <p class="information" id="cityOut"></p>
+          <h2 class="subHeader" id="subHeading"></h2><br>
+          <h3 class="expHeader" id="experience1Out"></h2>
+          <p id="experience1InfoOut"></p>
+          <h3 class="expHeader" id="experience2Out"></h2>
+          <p id="experience2InfoOut"></p>
+          <h3 class="expHeader" id="experience3Out"></h2>
+          <p id="experience3InfoOut"></p>
       </div>
     </div>
 
