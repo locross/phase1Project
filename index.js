@@ -68,9 +68,9 @@ fetch("http://localhost:3000/Saves", configurationObject);
 // Sets value of output field to value of input field
 function output(){
     document.getElementById('page').style.display = 'block'
-    document.getElementById('heading').innerText = form.fNameIn.value;
+    document.getElementById('heading').innerText = form.fNameIn.value + ' ' + form.lNameIn.value;
     document.getElementById('emailLogo').style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/725/725643.png')";
-    document.getElementById('emailOut').innerText = form.lNameIn.value;
+    document.getElementById('emailOut').innerText = form.eMailIn.value;
     document.getElementById('phoneLogo').style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/597/597177.png')";
     document.getElementById('phoneOut').innerText = form.phoneIn.value;
     document.getElementById('cityLogo').style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/25/25694.png')";
