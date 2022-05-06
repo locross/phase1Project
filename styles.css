@@ -13,14 +13,14 @@ div.page{
     margin: 40px auto;
     width: 602px;
     height: 876px;
-    background-color:burlywood;
+   display: none;
     
 }
 
 .heading{
     padding: 30px 0 10px 0;
     text-decoration: underline;
-    display: block
+   display: block 
 }
 
 .information{
@@ -53,4 +53,8 @@ div.page{
 .dropdown{
     padding-left: 10px;
 
+}
+
+#customisationButtons{
+    display: none;
 }

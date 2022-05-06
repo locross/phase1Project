@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     function fetchSaves(){
         fetch("http://localhost:3000/Saves")
         .then(response => response.json()) 
@@ -67,6 +67,7 @@ fetch("http://localhost:3000/Saves", configurationObject);
 
 // Sets value of output field to value of input field
 function output(){
+    document.getElementById('page').style.display = 'block'
     document.getElementById('heading').innerText = form.fNameIn.value;
     document.getElementById('emailLogo').style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/725/725643.png')";
     document.getElementById('emailOut').innerText = form.lNameIn.value;
@@ -81,7 +82,7 @@ function output(){
     document.getElementById('experience2InfoOut').innerText = form.experience2Info.value;
     document.getElementById('experience3Out').innerText = form.experience3In.value;
     document.getElementById('experience3InfoOut').innerText = form.experience3Info.value;
-    
+    document.getElementById('customisationButtons').style.display = 'block'
 };
 
 // Array and function for changing fonts button
